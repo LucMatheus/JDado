@@ -22,7 +22,6 @@ public class Mesa extends javax.swing.JFrame {
      */
     public Mesa() {
         initComponents();
-        //this.setIconImage(new ImageIcon("../img/icoMain.png").getImage());
     }
 
     /**
@@ -301,7 +300,7 @@ public class Mesa extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -321,6 +320,7 @@ public class Mesa extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 Mesa mesa = new Mesa();
+                mesa.setIconImage(new ImageIcon("../img/icoMain.png").getImage());
                 mesa.setVisible(true);
                 mesa.setLocation(600, 300);
             }
